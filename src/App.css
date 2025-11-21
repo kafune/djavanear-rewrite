@@ -991,9 +991,80 @@ header h1 {
     font-size: clamp(14px, 3vw, 18px);
   }
   
-  .showWelcome {
+.showWelcome {
+  padding: 0.75rem;
+  font-size: 14px;
+}
+}
+
+/* Chromebooks/telas baixas: reorganiza para caber sem rolagem vertical */
+@media (max-height: 820px) {
+  header {
+    padding: 0.5rem 0;
+  }
+
+  .container {
+    justify-content: flex-start;
+    padding: 0.5rem 0 1rem;
+    gap: 0.75rem;
+  }
+
+  .main-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .album-section {
+    flex-direction: column;
+    gap: 0.9rem;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .capa-album {
+    max-width: 280px;
+    flex-shrink: 0;
+  }
+
+  .info {
+    padding: 0;
+    text-align: center;
+  }
+
+  .nome-musica span {
+    display: inline;
+    margin-right: 0.35rem;
+  }
+
+  .verso-escolhido {
+    margin-top: 0.25rem;
+    font-size: clamp(13px, 2.8vw, 16px);
     padding: 0.75rem;
-    font-size: 14px;
+  }
+
+  .click-hint {
+    margin-top: 0.25rem;
+  }
+
+  .game-section {
+    padding: 0.85rem 1rem;
+    width: 100%;
+    max-width: 320px;
+    background: rgba(0, 0, 0, 0.04);
+    align-self: center;
+  }
+
+  .game-button {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.6rem;
+    font-size: clamp(15px, 2.8vw, 17px);
+  }
+
+  .game-description {
+    font-size: clamp(13px, 2.5vw, 15px);
   }
 }
 
